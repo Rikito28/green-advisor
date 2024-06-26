@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.detail.detailcamera.DetailCameraDetectActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/detail_camera_plant_image"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        tools:src="@drawable/greetings1"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/detail_camera_plant_image2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:src="@drawable/greetings1"
+        android:scaleType="fitXY"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:tag="@{data.data[0].foto}"
+        app:layout_constraintTop_toBottomOf="@id/detail_camera_plant_image"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/detail_camera_plant_image3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:src="@drawable/greetings1"
+        android:scaleType="fitXY"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:tag="@{data.data[1].foto1}"
+        app:layout_constraintTop_toBottomOf="@id/detail_camera_plant_image"
+        app:layout_constraintLeft_toRightOf="@id/detail_camera_plant_image2"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/detail_camera_plant_image4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:src="@drawable/greetings1"
+        android:scaleType="fitXY"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:tag="@{data.data[1].foto1}"
+        app:layout_constraintTop_toBottomOf="@id/detail_camera_plant_image"
+        app:layout_constraintLeft_toRightOf="@id/detail_camera_plant_image3"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detail_camera_plant_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/tanaman"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/detail_camera_plant_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/detail_camera_plant_name"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detail_camera_plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:textSize="23sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/detail_camera_plant_image2"
+        app:layout_constraintStart_toStartOf="@id/family" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detail_camera_plant_latin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contoh_tahun"
+        android:textSize="23sp"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textStyle="italic"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@id/detail_camera_plant_name"
+        app:layout_constraintStart_toEndOf="@id/detail_camera_plant_name"
+        app:layout_constraintBottom_toBottomOf="@id/detail_camera_plant_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/family_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/family"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_camera_plant_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/family"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/family"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textSize="18sp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toEndOf="@id/family_text"
+        app:layout_constraintTop_toTopOf="@id/family_text"
+        app:layout_constraintBottom_toBottomOf="@id/family_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/kingdom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kingdom"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/family_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/kingdom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kingdom"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textSize="18sp"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="@id/family"
+        app:layout_constraintStart_toEndOf="@id/kingdom_text"
+        app:layout_constraintTop_toTopOf="@id/kingdom_text"
+        app:layout_constraintBottom_toBottomOf="@id/kingdom_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iklim_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/iklim"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kingdom_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/camera_iklim"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/iklim"
+        tools:layout_width="wrap_content"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/family"
+        app:layout_constraintStart_toEndOf="@id/iklim_text"
+        app:layout_constraintTop_toTopOf="@id/iklim_text"
+        app:layout_constraintBottom_toBottomOf="@id/iklim_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/habitat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/habitat"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iklim_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/habitat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contoh_deskripsi"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/habitat_text"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/persebaran_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/persebaran"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/habitat" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/persebaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contoh_deskripsi"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/persebaran_text"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ekologi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ekologi"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/persebaran" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/any_ekologi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contoh_deskripsi"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ekologi_text"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/konservasi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/konservasi"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/any_ekologi" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/konservasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contoh_deskripsi"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/konservasi_text"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
